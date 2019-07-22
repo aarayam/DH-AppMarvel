@@ -1,4 +1,4 @@
-package br.com.digitalhouse.desafiowebservices.network;
+package br.com.digitalhouse.desafiowebservices.data.network;
 
 import br.com.digitalhouse.desafiowebservices.model.ComicsResponse;
 import io.reactivex.Single;

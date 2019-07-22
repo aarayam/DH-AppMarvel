@@ -1,4 +1,4 @@
-package br.com.digitalhouse.desafiowebservices.network;
+package br.com.digitalhouse.desafiowebservices.data.network;
 
 
 import com.facebook.stetho.okhttp3.StethoInterceptor;
