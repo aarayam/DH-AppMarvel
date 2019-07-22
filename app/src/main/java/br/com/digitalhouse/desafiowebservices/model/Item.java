@@ -6,6 +6,7 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.Expose;
 
+
 public class Item implements Parcelable {
 
     @Expose

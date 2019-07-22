@@ -1,5 +1,6 @@
 package br.com.digitalhouse.desafiowebservices.network;
 
+
 import com.facebook.stetho.okhttp3.StethoInterceptor;
 
 import java.util.concurrent.TimeUnit;

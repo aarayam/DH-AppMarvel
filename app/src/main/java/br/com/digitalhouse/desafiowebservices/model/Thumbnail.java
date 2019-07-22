@@ -19,7 +19,7 @@ public class Thumbnail implements Parcelable {
         path = in.readString();
     }
 
-    public static final Parcelable.Creator<Thumbnail> CREATOR = new Parcelable.Creator<Thumbnail>() {
+    public static final Creator<Thumbnail> CREATOR = new Creator<Thumbnail>() {
         @Override
         public Thumbnail createFromParcel(Parcel in) {
             return new Thumbnail(in);

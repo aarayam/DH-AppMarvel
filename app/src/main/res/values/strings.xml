@@ -3,4 +3,8 @@
     <string name="action_settings">Settings</string>
     <string name="header_heroi">HEADER_HEROI</string>
     <string name="description">Aqui fica a descrição e sinopse do quadrinho entre outras informações.</string>
+    <string name="date">April 30, 214</string>
+    <string name="published">Published:</string>
+    <string name="price">$ 5,99</string>
+    <string name="price_fix">Price:</string>
 </resources>

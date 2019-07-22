@@ -1,3 +1,4 @@
+
 package br.com.digitalhouse.desafiowebservices.model;
 
 import android.os.Parcel;

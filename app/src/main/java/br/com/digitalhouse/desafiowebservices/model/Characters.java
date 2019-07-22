@@ -5,8 +5,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.List;
-
 import com.google.gson.annotations.Expose;
+
 
 public class Characters implements Parcelable {
 
@@ -67,7 +67,6 @@ public class Characters implements Parcelable {
     }
 
     public void setItems(List<Item> items) {
-
         this.items = items;
     }
 

@@ -8,20 +8,20 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.widget.ProgressBar;
-
 import java.util.ArrayList;
+import java.util.List;
 
 import br.com.digitalhouse.desafiowebservices.R;
 import br.com.digitalhouse.desafiowebservices.adapters.RecyclerViewComicsAdapter;
+import br.com.digitalhouse.desafiowebservices.model.Result;
 import br.com.digitalhouse.desafiowebservices.viewmodel.ComicsViewModel;
 
 public class HomeActivity extends AppCompatActivity {
 
     private RecyclerView recyclerComics;
-    private ComicsViewModel viewModel;
     private RecyclerViewComicsAdapter comicsAdapter;
+   private List<Result> results = new ArrayList<>();
+    private ComicsViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,25 +30,23 @@ public class HomeActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        initViews();
+        inicializaViews();
 
-        viewModel.getResultLiveData().observe(this, results -> {
+        viewModel.getComics();
 
-        });
-
-        viewModel.isLoading().observe(this, loading -> {
-
-        });
+        viewModel.getResults().observe(this, results -> comicsAdapter.update(results));
 
     }
 
-    private void initViews() {
+    private void inicializaViews() {
         viewModel = ViewModelProviders.of(this).get(ComicsViewModel.class);
         recyclerComics = findViewById(R.id.recyclerComics);
-        comicsAdapter = new RecyclerViewComicsAdapter(new ArrayList<>());
+        comicsAdapter = new RecyclerViewComicsAdapter(results);
         recyclerComics.setHasFixedSize(true);
         recyclerComics.setItemViewCacheSize(20);
-        recyclerComics.setAdapter(comicsAdapter);
         recyclerComics.setLayoutManager(new GridLayoutManager(this, 3));
+        recyclerComics.setAdapter(comicsAdapter);
     }
 }
+
+

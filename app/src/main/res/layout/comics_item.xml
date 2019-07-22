@@ -6,24 +6,25 @@
     android:layout_height="wrap_content"
     android:layout_marginStart="8dp"
     android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
     android:orientation="vertical">
 
 
         <ImageView
-            android:id="@+id/imageViewComic"
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:id="@+id/imageViewComics"
+            android:layout_width="100dp"
+            android:layout_height="160dp"
             android:padding="5dp"
             android:scaleType="fitXY"
+            android:background="@drawable/borda"
             app:srcCompat="@drawable/xmen" />
 
         <TextView
-            android:id="@+id/textViewNumeroComic"
+            android:id="@+id/textViewNumber"
             style="@style/textNumero"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="#00"
              />

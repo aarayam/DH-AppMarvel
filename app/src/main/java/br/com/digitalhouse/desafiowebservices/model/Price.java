@@ -6,7 +6,6 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.Expose;
 
-
 public class Price implements Parcelable {
 
     @Expose

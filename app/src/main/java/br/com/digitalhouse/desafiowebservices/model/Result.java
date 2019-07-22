@@ -7,7 +7,6 @@ import android.os.Parcelable;
 import java.util.List;
 import com.google.gson.annotations.Expose;
 
-
 public class Result implements Parcelable {
 
     @Expose

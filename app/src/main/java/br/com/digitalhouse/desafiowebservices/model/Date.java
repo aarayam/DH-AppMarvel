@@ -6,7 +6,7 @@ import android.os.Parcelable;
 
 import com.google.gson.annotations.Expose;
 
-@SuppressWarnings("unused")public class Date implements Parcelable {
+public class Date implements Parcelable {
 
     @Expose
     private String date;

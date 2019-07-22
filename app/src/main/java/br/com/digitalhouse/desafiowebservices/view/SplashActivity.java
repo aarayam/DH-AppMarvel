@@ -22,9 +22,9 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
 
-        ImageView imagemSplash = findViewById(R.id.imageSplash);
+        ImageView imageSplash = findViewById(R.id.imageSplash);
 
-        imagemSplash.setOnClickListener(view -> jump());
+        imageSplash.setOnClickListener(view -> jump());
 
         timer.schedule(new TimerTask() {
             @Override
