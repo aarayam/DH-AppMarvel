@@ -28,7 +28,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="260dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/xmen"/>
+                android:src="@drawable/background"/>
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"

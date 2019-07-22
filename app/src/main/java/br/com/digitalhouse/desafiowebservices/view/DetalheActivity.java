@@ -3,6 +3,7 @@ package br.com.digitalhouse.desafiowebservices.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -53,7 +54,7 @@ public class DetalheActivity extends AppCompatActivity {
 
 
         textTitle.setText(result.getTitle());
-        //textViewDescription.setText(HtmlCompat.fromHtml(result.getDescription()));
+        textViewDescription.setText(Html.fromHtml(result.getDescription()));
 
         textViewPrice.setText("$" + result.getPrices().get(0).getPrice());
         textViewPages.setText(result.getPageCount().toString());

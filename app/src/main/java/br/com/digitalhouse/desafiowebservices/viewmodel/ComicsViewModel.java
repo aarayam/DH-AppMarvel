@@ -24,7 +24,6 @@ public class ComicsViewModel extends AndroidViewModel {
     private CompositeDisposable disposable = new CompositeDisposable();
     private ComicsRepository repository = new ComicsRepository();
 
-    // Construtor padrão do viewmodel
     public ComicsViewModel(@NonNull Application application) {
         super(application);
     }
@@ -34,7 +33,7 @@ public class ComicsViewModel extends AndroidViewModel {
         return resultLiveData;
     }
 
-    public LiveData<Boolean> isLoasing(){
+    public LiveData<Boolean> Loading(){
         return loading;
     }
 
@@ -48,7 +47,6 @@ public class ComicsViewModel extends AndroidViewModel {
                 })
                 .doAfterTerminate(() -> loading.setValue(false))
                 .subscribe(response -> {
-                    // Chegou aqui então alteramos o live data, assim a View que está observando ele pode atualizar a tela
                     resultLiveData.setValue(response.getData().getResults());
                 }, throwable -> {
                     Log.i("LOG", "Error: " + throwable.getMessage());
